@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 01:23:45 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/06 06:14:39 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/06 08:46:30 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ std::string	PhoneBook::cut(std::string word)
 void 	PhoneBook::search()
 {
 	std::string tmp;
-	int		id = 0;
+	int		id = -1;
 	int		i = 0;
 	
 	if (nb_contact == 0)
@@ -69,15 +69,14 @@ void 	PhoneBook::search()
 		std::cout << std::endl << "Enter index contact: ";
 		setgetline(tmp, false);
 		id = std::atoi(tmp.c_str());
-
-		while ((id < 0 || id > nb_contact) || !(std::isdigit(tmp[i++])))
+		while ((id <= 0 || id > nb_contact) || !(std::isdigit(tmp[i++])))
 		{
 			std::cout << "Index " << tmp << " doesn't exist !" << std::endl;
 			setgetline(tmp, true);
 			i = 0;
 			id = std::atoi(tmp.c_str());
 		}
-			contact[id-1].show();
+		contact[id-1].show();
 	}
 }
 
