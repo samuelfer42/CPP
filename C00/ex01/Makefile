@@ -7,7 +7,7 @@ SRC = 	src/main.cpp \
 		src/Contact.cpp
 
 
-FLAGS = -Werror -Wall -Wextra -g3 -std=c++98
+FLAGS = -Werror -Wall -Wextra -std=c++98
 
 CC = c++ $(FLAGS)
 
