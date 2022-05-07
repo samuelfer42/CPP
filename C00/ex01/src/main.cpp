@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 00:45:50 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/06 03:01:54 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/07 17:02:38 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	setgetline(std::string &input, bool p)
 {
 	if(p)
 		std::cout << ">";
-	std::getline(std::cin, input);
+	if(!std::getline(std::cin, input))
+		exit(0);
+
 	
 	if (input.empty())
 	{
