@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:00:34 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/09 11:10:13 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/13 01:51:56 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Harl::Harl(void)
 Harl::~Harl(void)
 { return ;}
 
-void	Harl::complain(std::string lvl)
+void	Harl::complain(std::string level)
 {
 	int i = 0;
 
@@ -55,7 +55,7 @@ void	Harl::complain(std::string lvl)
 	while (i < 4)
 	{
 		void (Harl::*target)(void) = complaint[i];
-		if (lvl == lvlArray[i])
+		if (level == lvlArray[i])
 			(this->*target)();
 		i++;
 	}
