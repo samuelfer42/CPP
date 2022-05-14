@@ -17,7 +17,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(FLAGS) -o $(NAME) $(OBJ) -L $(INCLUDES)
-	@printf "\n\e[36msuccessfully\e[0m_\e[33m compiled \e[92mis ready !\e[0m\e[?25h\n"
+	@printf "\n\e[36msuccessfully\e[0m $(NAME)\e[33m compiled \e[92mis ready !\e[0m\e[?25h\n"
 
 %.o: %.c
 	@$(CC) $(FLAGS) -I $(INCLUDES) -c $< -o $@
