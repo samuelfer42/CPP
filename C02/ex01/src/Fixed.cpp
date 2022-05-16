@@ -6,16 +6,27 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:38:20 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/14 03:29:25 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/16 04:27:29 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Fixed.hpp"
 
-Fixed::Fixed(void): _nfix(0){
+Fixed::Fixed(void): _fix_value(0){
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
+
+Fixed::Fixed(const int fixedPointValue) : _fix_value(fixedPointValue << this->_f_bit)
+{
+    std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed(const float floatingPointValue) : _fix_value(roundf(floatingPointValue * pow(2, this->_f_bit)))
+{
+    std::cout << "Float constructor called" << std::endl;
+}
+
 
 Fixed::~Fixed(void){
 	
@@ -29,19 +40,35 @@ Fixed::Fixed(const Fixed &cpy){
 	return ;
 }
 
-Fixed & Fixed::operator=(const Fixed & value){
-	std::cout << "Copy assignment operator called" << std::endl;
-	this-> _nfix = value.getRawBits();
-	return (*this);
+Fixed   &Fixed::operator=(Fixed const &rhs)
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this != &rhs)
+        this->_fix_value = rhs.getRawBits();
+    return *this;
 }
 
 int		Fixed::getRawBits(void) const{
-	std::cout << "getRawBits member function called" << std::endl;
-	return (this->_nfix);
+	return (this->_fix_value);
 }
 
 void	Fixed::setRawBits(int const raw){
-	std::cout << "setRawBits member function called" << std::endl;
-	this->_nfix = raw;
+	this->_fix_value = raw;
 	return ;
+}
+
+int     Fixed::toInt(void) const
+{
+    return (this->_fix_value >> this->_f_bit);
+}
+
+float   Fixed::toFloat(void) const
+{
+    return (this->_fix_value / pow(2, this->_f_bit));
+}
+
+std::ostream &operator<<(std::ostream &o, Fixed const &value)
+{
+    o << value.toFloat();
+    return o;
 }
