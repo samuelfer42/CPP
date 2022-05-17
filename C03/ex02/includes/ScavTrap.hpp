@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 23:54:08 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/17 22:44:55 by safernan         ###   ########.fr       */
+/*   Created: 2022/05/17 22:51:45 by safernan          #+#    #+#             */
+/*   Updated: 2022/05/17 23:58:04 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+ 
+# include <iostream>
+# include "../includes/ClapTrap.hpp"
+ 
+class ScavTrap : public ClapTrap {
 
-int main (void)
-{
-	ClapTrap claptrap("Michel");
+	public:
+		ScavTrap (std::string name);
+		ScavTrap(ScavTrap & cpy);
+		~ScavTrap (void);
 
-	claptrap.attack("Fourchette");
+		ScavTrap & operator=(ScavTrap const & rhs);
 
-	claptrap.attack("epee");
-	claptrap.takeDamage(5);
+		void 	guardGate (void) const;
+		void	attack(const std::string &target);
+
+
+	protected:	
+		ScavTrap (void);
 	
-	claptrap.attack("pistolet");
-	claptrap.takeDamage(5);
-	
-	claptrap.attack("YOUPI");
-	claptrap.beRepaired(10);
-}
+
+};
+
+#endif

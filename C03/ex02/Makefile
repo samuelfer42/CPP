@@ -1,9 +1,11 @@
-NAME = ClapTrap
+NAME = ScavTrap
 
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \
-		src/ClapTrap.cpp 
+		src/ClapTrap.cpp \
+		src/ScavTrap.cpp \
+		src/FragTrap.cpp
 
 FLAGS = -Werror -Wall -Wextra -std=c++98
 

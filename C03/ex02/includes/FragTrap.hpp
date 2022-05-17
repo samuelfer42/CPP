@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 23:54:08 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/17 22:44:55 by safernan         ###   ########.fr       */
+/*   Created: 2022/05/17 23:46:39 by safernan          #+#    #+#             */
+/*   Updated: 2022/05/17 23:55:30 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+ 
+# include <iostream>
+# include "../includes/ClapTrap.hpp"
+ 
+class FragTrap : public ClapTrap {
 
-int main (void)
-{
-	ClapTrap claptrap("Michel");
+	public:
+		FragTrap (std::string name);
+		FragTrap(FragTrap & cpy);
+		~FragTrap (void);
 
-	claptrap.attack("Fourchette");
-
-	claptrap.attack("epee");
-	claptrap.takeDamage(5);
+		FragTrap & operator=(FragTrap const & rhs);
+		
+		void highFivesGuyes(void) const;
+		void attack(const std::string & target);
 	
-	claptrap.attack("pistolet");
-	claptrap.takeDamage(5);
-	
-	claptrap.attack("YOUPI");
-	claptrap.beRepaired(10);
-}
+
+};
+
+#endif
