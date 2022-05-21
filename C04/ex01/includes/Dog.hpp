@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 03:24:08 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/20 00:58:15 by safernan         ###   ########.fr       */
+/*   Created: 2022/05/18 03:24:11 by safernan          #+#    #+#             */
+/*   Updated: 2022/05/20 04:12:50 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
  
 # include <iostream>
 # include "Animal.hpp"
- 
-class Cat : public Animal {
+# include "Brain.hpp"
+
+
+class Dog : public Animal {
 
 	public:
-		Cat (void);
-		Cat(Cat & cpy);
-		~Cat (void);
+		Dog (void);
+		Dog(Dog & cpy);
+		~Dog (void);
 
-		Cat & operator=(Cat const & rhs);
+		Dog & operator=(Dog const & rhs);
 
 		virtual void makeSound(void) const;
+		Brain* getBrain(void);
 
 	private:
-	
+		Brain* brain;
 
 };
 

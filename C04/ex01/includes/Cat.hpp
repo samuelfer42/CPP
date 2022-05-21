@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 03:24:08 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/20 00:58:15 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/20 04:12:43 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
  
 # include <iostream>
 # include "Animal.hpp"
- 
+ # include "Brain.hpp"
+
 class Cat : public Animal {
 
 	public:
@@ -26,8 +27,10 @@ class Cat : public Animal {
 		Cat & operator=(Cat const & rhs);
 
 		virtual void makeSound(void) const;
+		Brain* getBrain(void);
 
 	private:
+		Brain* brain;
 	
 
 };

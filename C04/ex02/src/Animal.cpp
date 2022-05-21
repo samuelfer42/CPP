@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 03:24:08 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/20 00:58:15 by safernan         ###   ########.fr       */
+/*   Created: 2022/05/18 03:13:10 by safernan          #+#    #+#             */
+/*   Updated: 2022/05/18 03:20:09 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
- 
-# include <iostream>
-# include "Animal.hpp"
- 
-class Cat : public Animal {
+#include "../includes/Animal.hpp"
 
-	public:
-		Cat (void);
-		Cat(Cat & cpy);
-		~Cat (void);
+std::string A_Animal::getType(void) const
+{
+	return (this->type);
+}
 
-		Cat & operator=(Cat const & rhs);
-
-		virtual void makeSound(void) const;
-
-	private:
-	
-
-};
-
-#endif
+A_Animal::~A_Animal(void)
+{
+	std::cout << "Animal destructor called" << std::endl;
+	return ;
+}
