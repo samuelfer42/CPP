@@ -1,14 +1,10 @@
-NAME = Animal
+NAME = Form
 
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \
-		src/Dog.cpp \
-		src/Cat.cpp \
-		src/Animal.cpp \
-		src/WrongAnimal.cpp \
-		src/WrongCat.cpp	\
-		src/Brain.cpp
+		src/Bureaucrat.cpp \
+		src/Form.cpp
 
 
 FLAGS = -Werror -Wall -Wextra -std=c++98
