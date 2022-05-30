@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 03:40:17 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/27 21:24:17 by safernan         ###   ########.fr       */
+/*   Created: 2022/05/30 03:50:49 by safernan          #+#    #+#             */
+/*   Updated: 2022/05/30 03:50:52 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
  
 # include <iostream>
- 
-class WrongAnimal {
+# include "Form.hpp"
+
+class ShrubberyCreationForm : public Form {
 
 	public:
-		WrongAnimal (void);
-		WrongAnimal(WrongAnimal & cpy);
-		virtual ~WrongAnimal (void);
+		ShrubberyCreationForm (std::string const & target);
+		ShrubberyCreationForm(ShrubberyCreationForm & cpy);
+		virtual ~ShrubberyCreationForm (void);
 
-		WrongAnimal & operator=(WrongAnimal const & rhs);
+		ShrubberyCreationForm & operator=(ShrubberyCreationForm const & rhs);
 
-		std::string getType(void) const;
-		virtual void makeSound(void) const;
+		 void		execute(Bureaucrat const & executor) const;
+	private:
+		std::string	_target;
 
-	protected:
-		std::string type;
 };
 
 #endif

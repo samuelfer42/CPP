@@ -6,15 +6,16 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 04:58:19 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/26 05:14:36 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/27 21:38:50 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Form.hpp"
 
 Form::Form(std::string const & name, int const & gradeToSign, int const & gradeToExec)
-	: _name(name), _grade_to_sign(gradeToSign), _grade_to_exec(gradeToExec), _signed(false)
+	: _name(name), _grade_to_sign(gradeToSign), _grade_to_exec(gradeToExec)
 {
+	this->_signed = false;
 	std::cout << "Form default constructor called" << std::endl;
 	if (this->_grade_to_exec > 150 || this->_grade_to_sign > 150)
 		throw Form::GradeTooLowException();
@@ -24,8 +25,9 @@ Form::Form(std::string const & name, int const & gradeToSign, int const & gradeT
 }
 
 Form::Form(Form & cpy) : _name(cpy.getName()), _grade_to_sign(cpy.getGradeToSign()),
-				_grade_to_exec(cpy.getGradeToExec()), _signed(cpy.isSigned())
+				_grade_to_exec(cpy.getGradeToExec())
 {
+	this->_signed = cpy.isSigned();
 	std::cout << "Form Copy constructor called"<< std::endl;
 	*this = cpy;
 	return ;

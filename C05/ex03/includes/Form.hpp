@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 04:57:42 by safernan          #+#    #+#             */
-/*   Updated: 2022/05/30 03:47:13 by safernan         ###   ########.fr       */
+/*   Updated: 2022/05/30 05:37:02 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Form {
 		
 		Form (std::string const &name, int const &gradetosign, int const &gradetoexec);
 		Form(Form & cpy);
-		~Form (void);
+		virtual ~Form (void);
 
 		Form & operator=(Form const & rhs);
 

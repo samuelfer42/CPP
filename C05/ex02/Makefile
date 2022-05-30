@@ -1,14 +1,13 @@
-NAME = Animal
+NAME = Form
 
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \
-		src/Dog.cpp \
-		src/Cat.cpp \
-		src/Animal.cpp \
-		src/WrongAnimal.cpp \
-		src/WrongCat.cpp	\
-		src/Brain.cpp
+		src/Bureaucrat.cpp \
+		src/Form.cpp \
+		src/PresidentialPardonForm.cpp \
+		src/RobotomyRequestForm.cpp \
+		src/ShrubberyCreationForm.cpp
 
 
 FLAGS = -Werror -Wall -Wextra -std=c++98
@@ -25,7 +24,7 @@ $(NAME): $(OBJ)
 	@$(CC) $(FLAGS) -o $(NAME) $(OBJ) -L $(INCLUDES)
 	@printf "\n\e[36msuccessfully\e[0m $(NAME)\e[33m compiled \e[92mis ready !\e[0m\e[?25h\n"
 
-%.o: %.c
+%.o: %.cpp
 	@$(CC) $(FLAGS) -I $(INCLUDES) -c $< -o $@
 	@printf "\e[?25l\e[JCreated \e[92m$(notdir $@)\e[0m\r"
 
@@ -35,6 +34,7 @@ clean:
 
 fclean: clean
 	@$(RM) -f $(NAME)
+	@$(RM) *_shrubbery
 	@printf "$(NAME) [\033[31mX\033[0m]\n"
 
 re : fclean all
