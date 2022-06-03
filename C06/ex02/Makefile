@@ -1,9 +1,9 @@
-NAME = Convert
+NAME = Base
 
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \
-		src/Convert.cpp 
+		src/Base.cpp 
 		
 FLAGS = -Werror -Wall -Wextra -std=c++98
 
