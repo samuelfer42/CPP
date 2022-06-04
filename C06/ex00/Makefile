@@ -29,7 +29,6 @@ clean:
 
 fclean: clean
 	@$(RM) -f $(NAME)
-	@$(RM) *_shrubbery
 	@printf "$(NAME) [\033[31mX\033[0m]\n"
 
 re : fclean all

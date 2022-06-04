@@ -1,9 +1,9 @@
-NAME = Cast
-
+NAME = Fonct
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \
-	
+
+		
 FLAGS = -Werror -Wall -Wextra -std=c++98
 
 CC = c++ $(FLAGS)
