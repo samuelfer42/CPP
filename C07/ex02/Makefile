@@ -1,4 +1,4 @@
-NAME = Fonct
+NAME = Array
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \

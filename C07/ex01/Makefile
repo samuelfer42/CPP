@@ -1,4 +1,4 @@
-NAME = Fonct
+NAME = Iter
 INCLUDES = 	includes
 
 SRC = 	src/main.cpp \
