@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 02:59:36 by safernan          #+#    #+#             */
-/*   Updated: 2022/06/05 03:13:27 by safernan         ###   ########.fr       */
+/*   Updated: 2022/06/11 04:21:17 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,25 @@ int main()
 	iter(tab_n, 3, print_value);
 	return 0;
 }
+
+
+//class Awesome
+//{
+//	public:
+//	Awesome( void ) : _n( 42 ) { return; } 
+//	int get( void ) const { return this->_n; } 
+//	private: 
+//		int _n;
+//}; 
+//std::ostream & operator<<( std::ostream & o, Awesome const & rhs ) { o << rhs.get();return o; } 
+//template< typename T >
+//void print( T const & x ) { std::cout << x << std::endl; return; } 
+//
+//int main() 
+//{ 
+//	int tab[] = { 0, 1, 2, 3, 4 }; 
+//	Awesome tab2[5];
+//	iter( tab, 5, print );
+//	iter( tab2, 5, print );
+//	return 0; 
+//}

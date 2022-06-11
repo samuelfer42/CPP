@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 03:19:30 by safernan          #+#    #+#             */
-/*   Updated: 2022/06/05 03:19:33 by safernan         ###   ########.fr       */
+/*   Updated: 2022/06/11 04:33:21 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Array {
 
 		Array<T>(const unsigned int size)
 		{
-			std::cout << "Array overloadconstructor called" << std::endl;
+			std::cout << "Array overload constructor called" << std::endl;
 			this->_array = new T[size];
 			this->_size = size;
 		}
@@ -54,7 +54,6 @@ class Array {
 
 		T & operator[](unsigned int index) const
 		{
-			//std::cout << "Array [] operator called" << std::endl;
 			if (!this->_size || index >= this->_size)
 				throw std::out_of_range("Out of range");
 			return this->_array[index];
