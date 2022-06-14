@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 06:42:08 by safernan          #+#    #+#             */
-/*   Updated: 2022/06/06 07:58:00 by safernan         ###   ########.fr       */
+/*   Updated: 2022/06/14 16:20:41 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,17 @@ int		main()
 	sp.addNumber(9);
 	sp.addNumber(11);
 	std::cout << "=====" << std::endl;
+	std::cout << "Shortest span: ";
 	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << "Longest  span: " ;
 	std::cout << sp.longestSpan() << std::endl;
 	std::cout << "=====" << std::endl;
 
 	
-	Span sp2 = Span(15000);
+	Span sp2 = Span(120);
 	try
 	{
-		sp2 = to_number(sp2, 15000);
+		sp2 = to_number(sp2, 20);
 	}
 	catch(const std::exception& e)
 	{

@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 05:10:56 by safernan          #+#    #+#             */
-/*   Updated: 2022/06/06 07:58:04 by safernan         ###   ########.fr       */
+/*   Updated: 2022/06/14 16:00:53 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,21 @@ int		main()
 		std::cout << *it << " ";
 	}
 	std::cout << "}" << std::endl;
-
+	std::cout << "=======" << std::endl;
+	std::cout << "Find 8 ?" << std::endl;
+	try
+	{
+		itr = easyfind(cont_tab, find);
+		std::cout << "Find ok -> " << (*itr) << std::endl;
+	}
+	catch(std::exception const &e)
+	{
+		std::cout << "Error: " << e.what() << std::endl;
+	}
+	std::cout << "=======" << std::endl;
+	
+	find = 81;
+	std::cout << "Find 81 ?" << std::endl;
 	try
 	{
 		itr = easyfind(cont_tab, find);

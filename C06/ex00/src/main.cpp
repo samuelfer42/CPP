@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 20:06:06 by safernan          #+#    #+#             */
-/*   Updated: 2022/06/01 04:18:30 by safernan         ###   ########.fr       */
+/*   Updated: 2022/06/10 13:42:40 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	while (argv[i])
 	{
 		conv = new Convert(argv[i]);
-		std::cout << "===>>" << argv[i]42.0f << std::endl;
+		std::cout << "===>>" << argv[i] << std::endl;
 		conv->aff_Char();
 		conv->aff_Int();
 		conv->aff_Float();

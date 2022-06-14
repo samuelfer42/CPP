@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 04:35:42 by safernan          #+#    #+#             */
-/*   Updated: 2022/06/03 04:54:45 by safernan         ###   ########.fr       */
+/*   Updated: 2022/06/11 03:42:39 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int main(void)
 	
 	std::cout << "Str: " << new_data->str << std::endl;
 	
+	delete data;
 
 	return 0;
 
