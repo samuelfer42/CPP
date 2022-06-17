@@ -11,5 +11,4 @@ Ce projet permet d'apprendre les bases du C++ et découvrir le langage de progra
 * CPP_06: Casts
 * CPP_07: Templates
 * CPP_08: Templated containers and iterators
-
 ---> Succeeded with 100%
